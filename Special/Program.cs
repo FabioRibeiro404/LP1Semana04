@@ -11,6 +11,11 @@ namespace Special
             int num = int.Parse(str);
             Console.WriteLine(GetSpecial(num));
         }
+        /// <summary>
+        /// Fibonacci
+        /// </summary>
+        /// <param name="n">Number position</param>
+        /// <returns></returns>
         private static int GetSpecial(int n)
         {
             int result;
