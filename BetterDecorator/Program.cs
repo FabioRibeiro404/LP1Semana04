@@ -14,7 +14,7 @@ namespace BetterDecorator
             string str2 = args[2];
             int num = int.Parse(str2);
 
-            Decor(phrase, letter, num);
+            Console.WriteLine(Decor(phrase, letter, num));
 
 
 
