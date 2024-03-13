@@ -59,7 +59,10 @@ namespace BetterDecorator
             }
             return result;
         }
-
+        /// <summary>
+        /// Print when no args
+        /// </summary>
+        /// <returns></returns>
         private static string Decor()
         {
             string empty = "User did not specify args!";
