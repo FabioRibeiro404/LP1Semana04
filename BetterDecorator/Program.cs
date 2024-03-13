@@ -6,24 +6,36 @@ namespace BetterDecorator
     {
         static void Main(string[] args)
         {
-            string phrase = args[0];
+            string phrase = "";
+            string str1 = "";
+            string str2 = "";
 
-            string str1 = args[1];
-            char letter = str1[0];
+            if (args.Length != 0)
+            {
+                phrase = args[0];
 
-            string str2 = args[2];
-            int num = int.Parse(str2);
+                str1 = args[1];
+                char letter = str1[0];
 
-            Console.WriteLine(Decor(phrase, letter, num));
+                str2 = args[2];
+                int num = int.Parse(str2);
 
-
+            
+            
+                Console.WriteLine(Decor(phrase, letter, num));
+            }
+            else
+            {
+                Console.WriteLine(Decor());
+            }
+            
 
         }
         /// <summary>
         /// Print 
         /// </summary>
         /// <param name="s">phrase</param>
-        /// <param name="dec">Hwhich character to print</param>
+        /// <param name="dec">Which character to print</param>
         /// <param name="a">How many times should print before and after</param>
         /// <returns></returns>
         private static string Decor(string s, char dec, int a)
@@ -45,8 +57,17 @@ namespace BetterDecorator
             {
                 result += dec;
             }
-
             return result;
+        }
+
+        private static string Decor()
+        {
+            string empty = "User did not specify args!";
+            string str3 = "=";
+            char repeat = str3[0];
+            int num1 = 3;
+            //Console.Write("hello");
+            return Decor(empty, repeat, num1);
         }
     }
 }
